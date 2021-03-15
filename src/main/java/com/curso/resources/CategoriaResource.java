@@ -1,6 +1,4 @@
-package com.curso.resourses;
-
-
+package com.curso.resources;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,18 +11,19 @@ import com.curso.domain.Categoria;
 
 @RestController
 @RequestMapping(value="/categorias")
-public class CategoriaResourse {
+public class CategoriaResource {
 	
-	@RequestMapping(method=RequestMethod.GET)
+    @RequestMapping(method=RequestMethod.GET)
 	public List<Categoria> listar() {
 		
-		Categoria cat3 = new Categoria(3,"Informática");
-		Categoria cat4 = new Categoria(4,"Escritório");
-		
-		List<Categoria> lista = new ArrayList<>();
-		lista.add(cat3);
-		lista.add(cat4);
-		
-		return lista;
+    	Categoria cat1 = new Categoria(3, "Informática");
+    	Categoria cat2 = new Categoria(4,"Escritório");
+    	
+    	List<Categoria> lista = new ArrayList<>();
+    	lista.add(cat1);
+    	lista.add(cat2);
+    	
+    	
+    	return lista;
 	}
 }
