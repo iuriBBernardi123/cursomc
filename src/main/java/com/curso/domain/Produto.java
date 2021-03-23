@@ -14,6 +14,8 @@ import javax.persistence.ManyToMany;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 
 @Entity
 @RequestMapping
@@ -26,7 +28,7 @@ public class Produto implements Serializable{
 	private String nome;
 	private Double preco;
 	
-	
+	@JsonBackReference
 	@ManyToMany
 	@JoinTable(name = "PRODUTO_CATEGORIA" ,
 			joinColumns = @JoinColumn (name = "PRODUTO_ID"),
